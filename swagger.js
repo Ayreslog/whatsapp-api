@@ -1,7 +1,7 @@
-const swaggerAutogen = require('swagger-autogen')({ openapi: '3.0.0', autoBody: false })
+const swaggerAutogen = require('swagger-autogen')({ openapi: '3.0.0', autoBody: false });
 
-const outputFile = './swagger.json'
-const endpointsFiles = ['./src/routes.js']
+const outputFile = './swagger.json';
+const endpointsFiles = ['./src/routes.js'];
 
 const doc = {
   info: {
@@ -71,6 +71,6 @@ const doc = {
       error: 'Invalid API key'
     }
   }
-}
+};
 
-swaggerAutogen(outputFile, endpointsFiles, doc)
+swaggerAutogen(outputFile, endpointsFiles, doc);

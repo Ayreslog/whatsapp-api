@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swagger UI</title>
+    <!-- Estilos do Swagger UI -->
+    <link rel="stylesheet" type="text/css" href="swagger-ui.css" />
+    <!-- Scripts do Swagger UI -->
+    <script src="swagger-ui-bundle.js"></script>
+    <script src="swagger-ui-standalone-preset.js"></script>
+  </head>
+  <body>
+    <!-- Container onde o Swagger UI será renderizado -->
+    <div id="swagger-ui"></div>
+
+    <script>
+      // Configuração do Swagger UI para apontar para o seu arquivo JSON
+      const ui = SwaggerUIBundle({
+        url: "http://172.21.24.170:3000/swagger.json",  // URL ou caminho para seu arquivo swagger.json
+        dom_id: '#swagger-ui',                         // Div onde o Swagger será carregado
+        deepLinking: true,
+        presets: [
+          SwaggerUIBundle.presets.apis,
+          SwaggerUIStandalonePreset
+        ],
+        layout: "StandaloneLayout"
+      });
+    </script>
+  </body>
+</html>
